@@ -1,5 +1,5 @@
 # Qt5SerialBus-ModbusTCP_fix
-For: Qt 5.15.2
+For: Qt 5.15.2 (opensource)
 A simple fix which allows ModbusTCP handle my custom commands.
 
 
@@ -15,7 +15,13 @@ QModbusResponse::registerDataSizeCalculator(QModbusPdu::FunctionCode(custom_fun_
 ```
 (4. Build Qt. The resulting dll (on Windows) will be in <build dir>\qtbase\bin)
 
+------------
 
 To build Qt follow the instructions from here: [GitHub - Qt5](https://github.com/qt/qt5/tree/5.15.2)
 
 Sometimes the compilation might result in an error (tested on Windows10). Adding **-opengl desktop** parameter to "configuration" might help.
+
+------------
+
+The files should be placed into
+"..\qt5\qtserialbus\src\serialbus"
